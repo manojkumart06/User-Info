@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-directory-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.user {
+  text-align: center;
+}
+
+.user img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(59, 215, 239, 0.953);
+  transition: transform 0.3s ease-in-out; 
+}
+
+.user:hover img {
+  transform: translateY(-5px); 
+}
+
+.name {
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  .users {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
